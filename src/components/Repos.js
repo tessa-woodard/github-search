@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { GithubContext } from '../context/context'
-import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts'
+import { Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts'
 
 const Repos = () => {
   const { repos } = React.useContext(GithubContext)
@@ -59,10 +59,10 @@ const Repos = () => {
   return (
     <section className="section">
       <Wrapper className="section-center">
-        {/* <Pie data={mostUsed} />
-        <Column data={stars} />
-        <Doughnut data={mostPopular} />
-        <Bar data={forks} /> */}
+        <Pie3D data={mostUsed} />
+        <Column3D data={stars} />
+        <Doughnut2D data={mostPopular} />
+        <Bar3D data={forks} />
       </Wrapper>
     </section>
   )
